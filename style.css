@@ -1,3 +1,9 @@
+.joti-one-regular {
+  font-family: "Joti One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --box-shadow--: 0 19px 38px 2px #bebebe, 19px -19px 38px #ffffff;
 }
