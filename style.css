@@ -29,7 +29,7 @@ a {
 
 .container {
   width: 80%;
-
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -117,4 +117,60 @@ ul > li:hover {
   color: var(--orange-color);
   transform: scale(1.2);
   cursor: pointer;
+}
+
+/* hero section */
+
+.hero {
+  margin-top: 5rem;
+  max-height: 60vh;
+}
+
+.hero-text {
+  box-shadow: var(--box-shadow--);
+  background: var(--orange-color);
+  display: grid;
+  grid-template-areas: "div img";
+  padding: 2rem;
+}
+
+.hero-text > .text {
+  grid-area: div;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10vw;
+}
+
+.text span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.job-post {
+  font-weight: bolder;
+  letter-spacing: 5px;
+  font-size: 30px;
+  margin-top: 6px;
+}
+
+.text .button button {
+  background: var(--darkmode-color--);
+  color: var(--darkmode-text-color);
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.hero-text > .hero-img {
+  grid-area: img;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -5rem;
+}
+
+.hero-img > img {
+  height: 120%;
 }
