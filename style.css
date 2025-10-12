@@ -1,0 +1,59 @@
+:root {
+  --box-shadow--: 0 19px 38px 2px #bebebe, 19px -19px 38px #ffffff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 70vw;
+  margin: auto;
+}
+
+/* navbar */
+
+nav {
+  background: skyblue;
+  padding: 0.8rem 0;
+  box-shadow: var(--box-shadow--);
+
+  position: sticky;
+  top: 0;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info > hr {
+  width: 100%;
+  transform: rotate(90deg);
+  border: 2px solid orangered;
+}
+
+.navopt > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-weight: bold;
+}
+
+ul > li {
+  margin-left: 15px;
+}
+
+ul > li:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
