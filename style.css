@@ -5,7 +5,7 @@
 }
 
 :root {
-  --box-shadow--: 0 19px 38px 2px #999999af, 19px -19px 38px #ffffff;
+  --box-shadow--: 0 19px 38px 2px #999999af, 19px -19px 38px #ffffff6f;
   --primary-backgroundcolor-blue--: rgb(135, 202, 247);
 
   --orange-color: orangered;
@@ -36,6 +36,14 @@ a {
 .wrapper {
   background: var(--primary-backgroundcolor-blue--);
   min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.title > span {
+  border-bottom: 3px solid var(--orange-color);
 }
 
 /* darkmode */
@@ -173,4 +181,100 @@ ul > li:hover {
 
 .hero-img > img {
   height: 120%;
+}
+
+/* banner section */
+
+.banner > div {
+  border-radius: 1.8rem;
+  box-shadow: var(--box-shadow--);
+  border: 1px solid black;
+  padding: 1.5rem 2rem;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+.banicon-1,
+.banicon-2,
+.banicon-3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.banicon-1::after {
+  content: "";
+  background: #000;
+  height: 60%;
+  width: 2px;
+  position: absolute;
+  left: 30%;
+}
+
+.banicon-2::after {
+  content: "";
+  background: #000;
+  height: 60%;
+  width: 2px;
+  position: absolute;
+  left: 70%;
+}
+
+.banner-icon {
+  background: var(--orange-color);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--darkmode-text-color);
+}
+
+.award-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.award-txt > div:first-child {
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.award-txt > div:last-child {
+  color: var(--orange-color);
+}
+
+/* skill-section */
+
+.skill {
+  margin-top: 10rem;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-list > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-list > div > i {
+  font-size: 4rem;
+}
+
+.skill-list span {
+  margin-top: 5px;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
