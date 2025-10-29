@@ -116,11 +116,11 @@ nav > div {
   font-weight: bold;
 }
 
-ul > li {
+.navopt ul > li {
   margin-left: 15px;
 }
 
-ul > li:hover {
+.navopt ul > li:hover {
   transition: all 0.3s linear;
 
   color: var(--orange-color);
@@ -436,4 +436,21 @@ footer {
   text-align: center;
   padding: 5rem 0;
   margin-top: 10rem;
+}
+
+footer .top {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+footer .top ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+footer .top ul li {
+  line-height: 1.5rem;
 }
