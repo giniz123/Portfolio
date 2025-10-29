@@ -13,6 +13,10 @@
   --darkmode-text-color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -133,6 +137,7 @@ nav > div {
 .hero {
   margin-top: 5rem;
   max-height: 60vh;
+  padding-top: 10rem;
 }
 
 .hero-text {
@@ -185,6 +190,10 @@ nav > div {
 }
 
 /* banner section */
+
+.banner {
+  padding-top: 10rem;
+}
 
 .banner > div {
   border-radius: 1.8rem;
@@ -255,6 +264,7 @@ nav > div {
 /* skill-section */
 
 .skill {
+  padding-top: 7rem;
   margin-top: 10rem;
 }
 
@@ -283,6 +293,7 @@ nav > div {
 /* project-section */
 
 .project {
+  padding-top: 7rem;
   margin-top: 10rem;
 }
 
@@ -453,4 +464,21 @@ footer .top ul {
 
 footer .top ul li {
   line-height: 1.5rem;
+}
+
+/* up-arrow section */
+
+.uparrow {
+  font-size: 3rem;
+  background: var(--orange-color);
+  width: 60px;
+  height: 60px;
+  /* padding: 1rem; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
