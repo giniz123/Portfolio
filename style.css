@@ -40,6 +40,7 @@ a {
 .wrapper {
   background: var(--primary-backgroundcolor-blue--);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .title {
@@ -126,7 +127,6 @@ nav > div {
 
 .navopt ul > li:hover {
   transition: all 0.3s linear;
-
   color: var(--orange-color);
   transform: scale(1.2);
   cursor: pointer;
@@ -204,8 +204,7 @@ nav > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  position: relative;
+  flex-wrap: wrap;
 }
 
 .banicon-1,
@@ -217,22 +216,10 @@ nav > div {
   gap: 15px;
 }
 
-.banicon-1::after {
-  content: "";
-  background: #000;
-  height: 60%;
+.banner > div .line {
+  height: 70px;
   width: 2px;
-  position: absolute;
-  left: 30%;
-}
-
-.banicon-2::after {
-  content: "";
-  background: #000;
-  height: 60%;
-  width: 2px;
-  position: absolute;
-  left: 70%;
+  background: grey;
 }
 
 .banner-icon {
@@ -380,7 +367,7 @@ nav > div {
 
 .contact {
   padding-top: 7rem;
-  width: 600px;
+  width: 400px;
   margin: auto;
   margin-top: 5rem;
 }
@@ -400,7 +387,7 @@ nav > div {
   font-size: 4rem;
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .contact h3 {
@@ -481,4 +468,89 @@ footer .top ul li {
   position: fixed;
   right: 20px;
   bottom: 20px;
+}
+
+#hamburger {
+  display: none;
+}
+
+[for="hamburger"] {
+  display: none;
+}
+
+/* media query */
+
+@media (max-width: 768px) {
+  [for="hamburger"] {
+    cursor: pointer;
+    display: block;
+  }
+
+  .navopt {
+    position: absolute;
+    background: var(--primary-backgroundcolor-blue--);
+    width: 250px;
+    height: 100vh;
+    top: 3.33rem;
+    left: 100vw;
+  }
+
+  .navopt > ul {
+    flex-direction: column;
+    padding-inline-start: 0;
+    line-height: 3rem;
+    font-size: 1.3rem;
+  }
+
+  #hamburger:checked + .navopt {
+    left: calc(100vw - 250px);
+    transition: all 0.5s;
+  }
+
+  /* hero-section */
+  .hero-text {
+    grid-template-areas:
+      "img"
+      "div";
+  }
+
+  .hero-text > .hero-img {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img > img {
+    height: 80%;
+  }
+
+  /* banner section */
+
+  .banner > div {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    padding-left: 22%;
+    gap: 2rem;
+  }
+
+  .banner > div .line {
+    display: none;
+  }
+
+  /* project-section */
+  .project > div .project-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* about-section */
+  .about-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-content .about-img {
+    width: 100%;
+  }
 }
